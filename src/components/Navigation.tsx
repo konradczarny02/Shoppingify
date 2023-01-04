@@ -28,7 +28,7 @@ const navLinks: NavLinkItem[] = [
 export const Navigation = () => {
   return (
     <div className="h-full bg-gray-100 py-5 md:py-7 flex flex-col justify-between items-center">
-      <img src="public/logo.svg" alt="logo" className="w-12" />
+      <img src="/logo.svg" alt="logo" className="w-12" />
       <div className="flex gap-12 flex-col w-full">
         {navLinks.map((link) => (
           <CustomNavLink to={link.href} key={link.id}>

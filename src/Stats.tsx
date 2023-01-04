@@ -1,11 +1,11 @@
 import React from 'react';
 import { Layout } from './Layout';
 
-export const App = () => {
+export const Stats = () => {
   return (
     <Layout>
       <div>
-        <h1 className="text-5xl text-blue-600">Items</h1>
+        <h1 className="text-5xl text-red-300">Stats</h1>
       </div>
     </Layout>
   );

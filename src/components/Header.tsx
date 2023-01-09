@@ -13,7 +13,7 @@ export const Header = () => {
     debouncedSearch(e.currentTarget.value);
 
   return (
-    <div className="flex gap-16 justify-center lg:justify-items-start">
+    <div className="flex gap-16 justify-center items-start lg:justify-items-start">
       <Heading />
       <Search onChange={handleSearch} />
     </div>

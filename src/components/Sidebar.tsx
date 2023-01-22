@@ -2,8 +2,10 @@ import React from 'react';
 import { AddItemBanner } from './AddItemBanner';
 import { ListNameInput } from './ListNameInput';
 import { ShoppingList } from './ShoppingList';
+import { NewItemForm } from './NewItemForm';
 
 export const Sidebar = () => {
+  const [content, setContent] = React.useState<'list' | 'form'>('form');
   const handleAddItem = () => {
     throw new Error('TODO: Add item not yet implemented');
   };
@@ -12,7 +14,7 @@ export const Sidebar = () => {
     throw new Error('TODO: add list name');
   };
 
-  return (
+  const list = (
     <div className="w-full h-full bg-orange-200 relative p-12">
       <AddItemBanner onClick={handleAddItem} />
       <ShoppingList />
@@ -21,4 +23,16 @@ export const Sidebar = () => {
       </div>
     </div>
   );
+
+  const form = (
+    <div className="w-full h-full p-12">
+      <NewItemForm />
+    </div>
+  );
+
+  if (content === 'list') {
+    return list;
+  }
+
+  return form;
 };
